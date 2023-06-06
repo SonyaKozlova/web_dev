@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Загадки</title>
+</head>
+<body>
+    <div>
+        <h1>Загадка 1</h1>
+
+        Речка спятила с ума —
+        <br>
+        По домам пошла сама.
+        <br>
+        <br>
+        <form>
+            <input id="answer1" type="text" placeholder="Введите ответ" />
+        </form>
+        <br />
+        <button onclick="func1()">Проверить</button>
+        <br />
+        <p id="result1"></p>
+    </div>
+    <div>
+        <h1>Загадка 2</h1>
+
+        Музыкант, певец, рассказчик —
+        <br>
+        А всего труба да ящик.
+        <br>
+        <br>
+        <form>
+            <input id="answer2" type="text" placeholder="Введите ответ" />
+        </form>
+        <br />
+        <button onclick="func2()">Проверить</button>
+        <br />
+        <p id="result2"></p>
+    </div>
+    <p>Отгадано:</p>
+    <p id="count"></p>
+
+    <script>
+
+        var count = 0;
+
+        function func1() {
+            var result;
+            var answer = document.getElementById("answer1").value;
+            if (answer == "водопровод") {
+                result = "Верно";
+                count += 1;
+            } else {
+                result = "Попробуй еще раз!";
+            }
+            document.getElementById("result1").innerHTML = result;
+            document.getElementById("count").innerHTML = count;
+        }
+
+        function func2() {
+            var result;
+            var answer = document.getElementById("answer2").value;
+            if (answer == "граммофон") {
+                result = "Верно";
+                count += 1;
+            } else {
+                result = "Попробуй еще раз!";
+            }
+            document.getElementById("result2").innerHTML = result;
+            document.getElementById("count").innerHTML = count;
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title></title>
+</head>
+<body>
+
+    <form>
+        <input id="res" placeholder="Введите вашу фамилию" />
+    </form>
+    <br />
+    <button onclick="func()">OK</button>
+    <br />
+    <p id="result"></p>
+
+    <script>
+
+        function func() {
+            var str = document.getElementById("res").value;
+            
+            if (str == str.split('').reverse().join('')) {
+                document.getElementById("result").innerHTML = "Это палиндром!";
+            } else {
+                document.getElementById("result").innerHTML = "Просто фамилия";
+            }
+            
+
+
+        }
+    </script>
+
+
+</body>
+</html>
